@@ -5,13 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Spam</title>
+    <link rel="stylesheet" href="../static/style.css">
 </head>
 <body style="background-color: rgb(192, 217, 255);">
     <div class="container" >
         <form action="/upload" method="post" enctype="multipart/form-data" id="formid">
             Enter The spam message
             <br>
-            <textarea name="message" id="" cols="30" rows="10" placeholder="Enter your spam message"></textarea>
+            <textarea name="message" id="" cols="60" rows="10" placeholder="Enter your spam message"></textarea>
             <br>    
             <input type="submit" value="Check">
             <h1>{{msg}}</h1>

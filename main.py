@@ -8,7 +8,7 @@ from app import predict
 templates=Jinja2Templates(directory="templates")
 
 app=FastAPI()
-
+app.mount("/static",StaticFiles(directory="Static"),name="static")
 
 @app.get('/',response_class=HTMLResponse)
 def home(request:Request):
@@ -18,7 +18,6 @@ def home(request:Request):
 @app.post('/upload',response_class=HTMLResponse)
 async def get_spam(request:Request,message:str=Form(...)):
     spam_pred=predict(message)
-    msg=[]
     if spam_pred[0]==1:
         context={'request':request,'msg':'Spam'}
     else:

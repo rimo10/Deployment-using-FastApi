@@ -1,0 +1,8 @@
+.container
+{
+    width: 700px;
+    height: 400px;
+    /* background-color: black; */
+    margin: auto;
+    padding: 10px;
+}
